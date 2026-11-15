@@ -1,5 +1,24 @@
 # 🏢 Franchise Brand Management System (FBMS)
 
+## 🚀 Live Demo
+
+**https://labiba-rahman-oroni.github.io/FBM-franchise-brand-management-/**
+
+| Role | Email | Password |
+|---|---|---|
+| Super Admin | admin@fbms.com | Admin123 |
+| Brand Manager | manager@fbms.com | Manager123 |
+| Marketing | marketing@fbms.com | Marketing123 |
+| Designer | designer@fbms.com | Designer123 |
+| Branch Manager | branch@fbms.com | Branch123 |
+
+> ⏳ The backend runs on a free server that sleeps when idle. The first login can take up to a minute. Please wait and try again.
+
+**Stack:** React · Vite · Tailwind CSS · Node.js · Express · MySQL (TiDB Cloud) · JWT · GitHub Pages · Render
+
+---
+
+
 > A centralized web-based platform for managing franchise branding, marketing campaigns, brand assets, branch customization requests, and brand consistency across multiple franchise locations.
 
 ---
