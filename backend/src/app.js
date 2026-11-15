@@ -6,6 +6,7 @@ const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 
 const routes = require('./routes');
+const { env } = require('./config/env');
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(
 
 app.use(
   cors({
-    origin: 'http://localhost:5173',
+    origin: env.clientOrigins,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
@@ -38,23 +39,14 @@ app.use(
 );
 
 app.get('/api/health', (req, res) => {
-  console.log('Health endpoint hit');
   res.json({ status: 'ok' });
 });
 
-// Mount ALL API routes
 app.use('/api', routes);
-
 
 const { notFound, errorHandler } = require('./middleware/errorHandler');
 
-// Mount API routes
-app.use('/api', routes);
-
-// 404 handler
 app.use(notFound);
-
-// Global error handler
 app.use(errorHandler);
 
 module.exports = app;
